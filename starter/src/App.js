@@ -40,11 +40,22 @@ export default function App() {
 		},
 	];
 
+	const [currentQuestion, setCurrentQuestion] = useState(0);
+	const [showScore, setShowScore] = useState(false);
+	
+	const handleAnswerButtonClick = (answerOption) => {
+		const nextQuestion = currentQuestion + 1;
+		setCurrentQuestion(nextQuestion);
+		if (nextQuestion < questions.length) {
+			setCurrentQuestion(nextQuestion);
+		} else {
+			setShowScore(true);
+		}
+	};
+
 	return (
-		<div className='app'>
-			{/* HINT: replace "false" with logic to display the 
-      score when the user has answered all the questions */}
-			{false ? (
+		<div className='app'>{
+			showScore ? (
 				<div className='score-section'>You scored 1 out of {questions.length}</div>
 			) : (
 				<>
@@ -52,13 +63,12 @@ export default function App() {
 						<div className='question-count'>
 							<span>Question 1</span>/{questions.length}
 						</div>
-						<div className='question-text'>This is where the question text should go</div>
+						<div className='question-text'>{questions[currentQuestion].questionText}</div>
 					</div>
 					<div className='answer-section'>
-						<button>Answer 1</button>
-						<button>Answer 2</button>
-						<button>Answer 3</button>
-						<button>Answer 4</button>
+						{questions[currentQuestion].answerOptions.map((answerOption, index) => (
+							<button onClick = {() => handleAnswerButtonClick()}>{answerOption.isCorrect}</button>
+						))}
 					</div>
 				</>
 			)}
