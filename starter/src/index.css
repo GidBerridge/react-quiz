@@ -7,12 +7,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 * {
-  font-family: "Verdana", cursive, sans-serif;
+  font-family: 'Verdana', cursive, sans-serif;
   color: #ffffff;
 }
 
 body {
-  background-color: #7cc6fe;
+  background-image: url('/img/zappa_bg_ol.jpg');
+  /* background-color: rgb(50, 20, 100); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,8 +77,8 @@ body {
 button {
   width: 100%;
   font-size: 16px;
-  color: #ffffff;
-  background-color: #252d4a;
+  color: #000;
+  background-color: #ecca33;
   border-radius: 15px;
   display: flex;
   padding: 5px;
@@ -96,7 +97,7 @@ button {
 }
 
 button:hover {
-  background-color: #555e7d;
+  background-color: rgb(248, 181, 80);
 }
 
 button:focus {
