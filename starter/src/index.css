@@ -12,13 +12,18 @@ body {
 }
 
 body {
-  background-image: url('/img/zappa_bg_ol.jpg');
-  /* background-color: rgb(50, 20, 100); */
+  background-image: url('img/zappa_bg_ol.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
+
+/* media qery needed on bg image for phones */
 
 .app {
   background-color: #252d4a;

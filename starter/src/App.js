@@ -3,39 +3,39 @@ import React, { useState } from 'react';
 export default function App() {
 	const questions = [
 		{
-			questionText: 'What is the capital of France?',
+			questionText: 'Which of these does Frank Zappa have named after him?',
 			answerOptions: [
-				{ answerText: 'New York', isCorrect: false },
-				{ answerText: 'London', isCorrect: false },
-				{ answerText: 'Paris', isCorrect: true },
-				{ answerText: 'Dublin', isCorrect: false },
+				{ answerText: 'A comet - Zappa 421a', isCorrect: false },
+				{ answerText: 'A dinosaur - Zappasaurus', isCorrect: false },
+				{ answerText: 'A type of bacteria that causes acne - P. Acnes type Zappae', isCorrect: true },
+				{ answerText: 'An element of the periodic table - Zapponium (Za)', isCorrect: false },
 			],
 		},
 		{
-			questionText: 'Who is CEO of Tesla?',
+			questionText: 'Which famous guest bass player played on the title track of Apostrophe?',
 			answerOptions: [
-				{ answerText: 'Jeff Bezos', isCorrect: false },
-				{ answerText: 'Elon Musk', isCorrect: true },
-				{ answerText: 'Bill Gates', isCorrect: false },
-				{ answerText: 'Tony Stark', isCorrect: false },
+				{ answerText: 'Greg Lake', isCorrect: false },
+				{ answerText: 'Jack Bruce', isCorrect: true },
+				{ answerText: 'Lemmy', isCorrect: false },
+				{ answerText: 'Bill Wyman', isCorrect: false },
 			],
 		},
 		{
-			questionText: 'The iPhone was created by which company?',
+			questionText: 'In January 1990, which country appointed Zappa as "Special Ambassador to the West on Trade, Culture and Tourism”?',
 			answerOptions: [
-				{ answerText: 'Apple', isCorrect: true },
-				{ answerText: 'Intel', isCorrect: false },
-				{ answerText: 'Amazon', isCorrect: false },
-				{ answerText: 'Microsoft', isCorrect: false },
+				{ answerText: 'Czech Republic', isCorrect: true },
+				{ answerText: 'Poland', isCorrect: false },
+				{ answerText: 'Belarus', isCorrect: false },
+				{ answerText: 'Hungary', isCorrect: false },
 			],
 		},
 		{
-			questionText: 'How many Harry Potter books are there?',
+			questionText: 'What was Franks middle name?',
 			answerOptions: [
-				{ answerText: '1', isCorrect: false },
-				{ answerText: '4', isCorrect: false },
-				{ answerText: '6', isCorrect: false },
-				{ answerText: '7', isCorrect: true },
+				{ answerText: 'Harold', isCorrect: false },
+				{ answerText: 'Bob', isCorrect: false },
+				{ answerText: 'David', isCorrect: false },
+				{ answerText: 'Vincent', isCorrect: true },
 			],
 		},
 	];
@@ -85,6 +85,7 @@ export default function App() {
 
 
 	return (
+		
 		<div className='app'>
 			{showScore ? (
 				<div>
@@ -109,6 +110,7 @@ export default function App() {
 						))}
 					</div>
 				</>
+				
 			)}
 		</div>
 	);
