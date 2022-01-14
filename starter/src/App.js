@@ -86,7 +86,7 @@ export default function App() {
 
 	return (
 		
-		<div className='app'>
+		<div className='question_box'>
 			{showScore ? (
 				<div>
 					<div className='score-section'>					
