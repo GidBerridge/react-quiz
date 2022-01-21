@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
+import FinalScore from './FinalScore';
 
+export const [score, setScore] = useState(0);
+export const qlength = useState(0);
 
 function QuestionBox() {
 	const questions = [
@@ -43,11 +46,12 @@ function QuestionBox() {
 
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [showScore, setShowScore] = useState(false);
-	const [score, setScore] = useState(0);
-	const scoreText = useState(["The man from Utopia!", "Wild love", "Tryin’ To Grow A Chin",
-			"Cosmik Debris", "Dancing fool", "Shut up and play your guitar", "Dumb all over"])
+	
+	
+
 
 	const handleAnswerOptionClick = (isCorrect) => {
+		qlength = questions.length;
 		if (isCorrect) {
 			setScore(score + 1);
 		}
@@ -60,44 +64,15 @@ function QuestionBox() {
 		}
 	};
 
-	const scoreComment = (score) => {
-		if (score === 10) {
-			return scoreText[0];
-		}
-		if (score > 7 && score < 10) {
-			return scoreText[1];
-		}
-		if (score > 5 && score < 8) {
-			return scoreText[2];
-		}
-		if (score > 3 && score < 6) {
-			return scoreText[3];
-		}
-		if (score > 1 && score < 4) {
-			return scoreText[4];
-		}
-		if (score === 1) {
-			return scoreText[5];
-		}
-		if (score === 0) {
-			return  scoreText[6];
-		}
-	};
+
 
 
 	return (
 		
 		<div className='question_box'>
-			{showScore ? (
-				<div>
-					<div className='score-section'>					
-							You scored {score} out of {questions.length}					
-					</div>
-					<div className='score-section'>	
-						{scoreComment(score)}
-					</div>
-				</div>
-			) : (
+			{showScore ? 
+            <FinalScore />
+            : (
 				<>
 					<div className='question-section'>
 						<div className='question-count'>
