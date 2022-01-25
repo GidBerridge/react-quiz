@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import FinalScore from './FinalScore';
+import DisplayScore from './DisplayScore';
 
-export const [score, setScore] = useState(0);
-export const qlength = useState(0);
+
 
 function QuestionBox() {
 	const questions = [
@@ -46,12 +45,15 @@ function QuestionBox() {
 
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [showScore, setShowScore] = useState(false);
-	
-	
+	const [score, setScore] = useState(0);
 
+
+	const handleScore = () => {
+		console.log(setScore())
+	}
 
 	const handleAnswerOptionClick = (isCorrect) => {
-		qlength = questions.length;
+		
 		if (isCorrect) {
 			setScore(score + 1);
 		}
@@ -71,7 +73,10 @@ function QuestionBox() {
 		
 		<div className='question_box'>
 			{showScore ? 
-            <FinalScore />
+            <DisplayScore 
+			qAmount={questions.length}
+			finalScore={handleScore}
+			/>
             : (
 				<>
 					<div className='question-section'>
