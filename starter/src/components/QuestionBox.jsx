@@ -48,8 +48,9 @@ function QuestionBox() {
 	const [score, setScore] = useState(0);
 
 
+
 	const handleScore = () => {
-		console.log(setScore())
+		return score
 	}
 
 	const handleAnswerOptionClick = (isCorrect) => {
@@ -75,7 +76,7 @@ function QuestionBox() {
 			{showScore ? 
             <DisplayScore 
 			qAmount={questions.length}
-			finalScore={handleScore}
+			totalScore={handleScore}
 			/>
             : (
 				<>
