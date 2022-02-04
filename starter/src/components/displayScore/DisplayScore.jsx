@@ -1,5 +1,6 @@
 import React from 'react'
 import './DisplayScore.scss'
+import FadeIn from 'react-fade-in';
 
 function DisplayScore(props) {
   const scoreText = [
@@ -25,15 +26,17 @@ function DisplayScore(props) {
   }
 
   return (
-    <div className='card-container'>
-      <div className="card card__score">
-        <p style={{ margin: "auto 0 auto auto" }}>You scored</p> 
-        <div className="number">{ props.totalScore()}</div> 
-        <p style={{ margin: "auto auto auto 0"  }}>out of {props.qAmount}</p>
+    <FadeIn>
+      <div className='card-container'> 
+        <div className="card card__score">
+          <p style={{ margin: "auto 0 auto auto" }}>You scored</p> 
+          <div className="number">{ props.totalScore()}</div> 
+          <p style={{ margin: "auto auto auto 0"  }}>out of {props.qAmount}</p>
+        </div>
+        <div className="card card__score--comment">{scoreComment()}</div>
+        <button className="card card__button" onClick={refreshPage}>Try again?</button>      
       </div>
-      <div className="card card__score--comment">{scoreComment()}</div>
-      <button className="card card__button" onClick={refreshPage}>Try again?</button>
-    </div>
+    </FadeIn>
   )
 }
 
