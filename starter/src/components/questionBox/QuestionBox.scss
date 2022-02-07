@@ -5,23 +5,34 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  justify-self: flex-end;
+
+  // @media screen and (max-width: 710px) {
+  //   height: 70vh;
+  // }
 }
 
 .card {
   height: min-content;
   border: 1px solid #000;
   border-radius: 15px;
-  padding: 20px;
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
-  display: flex;
   padding: 2rem;
   margin: auto;
+
+  @media screen and (min-width: 710px) {
+    display: flex;
+  }
 
   &__question {
     background-color: #252d4a;
     min-height: 200px;
-    min-width: 40rem;
-    width: 80%;
+    width: 40rem;
+
+    @media screen and (max-width: 710px) {
+      width: 20rem;
+      margin-top: 6rem;
+    }
   }
 
   &__score {
@@ -30,7 +41,7 @@
 
     &--comment {
       background-color: #a54925;
-      margin: auto;
+      margin: 2rem;
       font-size: 2.5rem;
     }
   }
@@ -82,7 +93,7 @@ button svg {
 
 /* ANSWERS/RIGHT SECTION */
 .answer-section {
-  width: 40rem;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

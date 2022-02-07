@@ -7,9 +7,19 @@
   position: fixed;
   top: 0;
   left: 0;
+
+  @media screen and (max-width: 710px) {
+    font-size: 3.5rem;
+  }
 }
 
 .subheading {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
+  padding: 0 0.5rem;
+
+  @media screen and (max-width: 710px) {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
 }
