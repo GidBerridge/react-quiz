@@ -1,12 +1,13 @@
 .header {
   background-color: #252d4a;
-  width: 100%;
+  width: 100vw;
   color: #ecca33;
   font-size: 6rem;
   text-align: center;
-  position: fixed;
+  // position: fixed;
   top: 0;
   left: 0;
+  padding: 1rem;
 
   @media screen and (max-width: 710px) {
     font-size: 3.5rem;
@@ -14,12 +15,63 @@
 }
 
 .subheading {
+  width: 80%;
   font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  padding: 0 0.5rem;
+  margin: 0 auto 1.5rem auto;
+  padding: 1rem 0.5rem;
+
+  &__text {
+    text-align: center;
+    // color: #0a770a;
+  }
 
   @media screen and (max-width: 710px) {
     font-size: 1.5rem;
-    margin-bottom: 0.75rem;
+    margin-top: 1rem;
+  }
+}
+
+.fadeOut_1 {
+  animation-name: fadeOut_1;
+  animation-duration: 4s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+}
+
+@keyframes fadeOut_1 {
+  0% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fadeOut_2 {
+  animation-name: fadeOut_2;
+  animation-duration: 8s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+}
+
+@keyframes fadeOut_2 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  51% {
+    opacity: 1;
+  }
+
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
