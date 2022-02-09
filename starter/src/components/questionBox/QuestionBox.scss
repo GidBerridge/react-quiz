@@ -40,8 +40,10 @@
 
     &--comment {
       background-color: #a54925;
-      margin: 2rem;
       font-size: 2.5rem;
+      @media screen and (max-width: 710px) {
+        margin: 2rem auto;
+      }
     }
   }
 
