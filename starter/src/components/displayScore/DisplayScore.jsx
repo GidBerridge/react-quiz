@@ -27,7 +27,7 @@ function DisplayScore(props) {
 
   return (
     <FadeIn>
-      <div className='card-container'> 
+      <div className='card-container card-container__score'> 
         <div className="card card__score">
           <p style={{ margin: "auto 0 auto auto" }}>You scored</p> 
           <div className="number">{ props.totalScore()}</div> 
