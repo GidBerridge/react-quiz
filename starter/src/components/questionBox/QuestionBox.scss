@@ -1,17 +1,12 @@
 /* media query needed on bg image and q_box width for phones */
 
 .card-container {
-  height: 50vh;
+  // height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  justify-self: flex-end;
-
-  // @media screen and (max-width: 710px) {
-  //   height: 70vh;
-  // }
+  margin: auto;
 }
-
 .card {
   height: min-content;
   border: 1px solid #000;
@@ -26,7 +21,6 @@
 
   &__question {
     background-color: #252d4a;
-    min-height: 200px;
     width: 40rem;
 
     @media screen and (max-width: 710px) {

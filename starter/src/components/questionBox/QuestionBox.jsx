@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import DisplayScore from '../displayScore/DisplayScore.jsx';
+import Subheading from '../header/Subheading.js'
 import './QuestionBox.scss'
 
 
@@ -126,27 +127,29 @@ function QuestionBox(props) {
 
 	return (
 		
-		<div>
+		<div className='card-container'>
 			{showScore ? 
             <DisplayScore 
 			qAmount={questions.length}
 			totalScore={handleScore}
 			/>
             : (
-				<div className='card card__question'>
-					<div className='question-section'>
-						<div className='question-count'>
-							<span>Question {currentQuestion + 1}</span>/{questions.length}
+				<>
+					<Subheading />
+					<div className='card card__question'>
+						<div className='question-section'>
+							<div className='question-count'>
+								<span>Question {currentQuestion + 1}</span>/{questions.length}
+							</div>
+							<div className='question-text'>{questions[currentQuestion].questionText}</div>
 						</div>
-						<div className='question-text'>{questions[currentQuestion].questionText}</div>
+						<div className='answer-section'>
+							{questions[currentQuestion].answerOptions.map((answerOption) => (
+								<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+							))}
+						</div>
 					</div>
-					<div className='answer-section'>
-						{questions[currentQuestion].answerOptions.map((answerOption) => (
-							<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
-						))}
-					</div>
-				</div>
-				
+				</>
 			)}
 		</div>
 	);

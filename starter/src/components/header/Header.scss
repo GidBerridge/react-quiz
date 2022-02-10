@@ -19,6 +19,7 @@
   font-size: 1.8rem;
   margin: 0 auto 1.5rem auto;
   padding: 1rem 0.5rem;
+  height: min-content;
 
   &__text {
     text-align: center;
@@ -74,6 +75,6 @@
   }
   100% {
     opacity: 0;
-    height: 0;
+    // height: 0;
   }
 }
