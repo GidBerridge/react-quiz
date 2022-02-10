@@ -1,11 +1,20 @@
 /* media query needed on bg image and q_box width for phones */
 
 .card-container {
-  // height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: auto;
+
+  width: 100%;
+
+  @media screen and (max-width: 710px) {
+    height: calc(100vh - 2rem);
+  }
+
+  &__score {
+    height: calc(100vh - 5rem);
+  }
 }
 .card {
   height: min-content;
@@ -25,12 +34,14 @@
 
     @media screen and (max-width: 710px) {
       width: 20rem;
+      height: 30rem;
     }
   }
 
   &__score {
     background-color: #d87c57;
     font-size: 1.5rem;
+    padding: 1rem 2rem;
 
     &--comment {
       background-color: #a54925;
