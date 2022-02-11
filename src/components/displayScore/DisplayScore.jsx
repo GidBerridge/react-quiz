@@ -33,7 +33,7 @@ function DisplayScore(props) {
           <div className="number">{ props.totalScore()}</div> 
           <p style={{ margin: "auto auto auto 0"  }}>out of {props.qAmount}</p>
         </div>
-        <div className="card card__score--comment">{scoreComment()}</div>
+        <div className="card card__score--comment fadeIn">{scoreComment()}</div>
         <div className="card card__try-again" onClick={refreshPage}>Try again?</div>      
       </div>
     </FadeIn>
