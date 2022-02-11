@@ -1,8 +1,9 @@
 .header {
-  background-color: #252d4a;
+  background-color: #3a0b18;
   width: 100vw;
-  color: #ecca33;
+  color: rgb(196, 194, 194);
   font-size: 6rem;
+  font-family: 'Architects Daughter', cursive;
   text-align: center;
   top: 0;
   left: 0;
@@ -22,7 +23,7 @@
 
   &__text {
     text-align: center;
-    // color: #0a770a;
+    // color: #e6e6e6;
   }
 
   @media screen and (max-width: 710px) {
