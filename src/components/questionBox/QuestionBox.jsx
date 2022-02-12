@@ -70,7 +70,7 @@ function QuestionBox(props) {
 			],
 		},
 		{
-			questionText: "Which Zappa album features an excerpt from 'Run Home Slow', a theme tune Frank recorded for a Cowboy film",
+			questionText: "Which Zappa album features an excerpt from 'Run Home Slow', a theme tune Frank recorded for a Cowboy film in the 1960s?",
 			answerOptions: [
 				{ answerText: 'Lumpy Gravy', isCorrect: true },
 				{ answerText: "We're only in it for the money", isCorrect: false },
@@ -136,7 +136,7 @@ function QuestionBox(props) {
             : (
 				<>
 					
-					<div className='card card__question'>
+					<div className='card card__question fadeIn'>
 						<div className='question-section'>
 							<div className='question-count'>
 								<span>Question {currentQuestion + 1}</span>/{questions.length}

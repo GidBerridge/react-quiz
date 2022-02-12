@@ -17,7 +17,7 @@
 
 .subheading {
   width: 80%;
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin: 0 auto 1.5rem auto;
   padding: 1rem 0.5rem;
   height: min-content;
@@ -35,7 +35,7 @@
 
 .fadeOut_1 {
   animation-name: fadeOut_1;
-  animation-duration: 4s;
+  animation-duration: 3s;
   animation-fill-mode: both;
   animation-timing-function: ease-out;
 }
@@ -64,19 +64,18 @@
   0% {
     opacity: 0;
   }
-  50% {
+  40% {
     opacity: 0;
   }
-  51% {
+  55% {
     opacity: 1;
   }
 
-  85% {
+  75% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-    // height: 0;
   }
 }
 
@@ -92,7 +91,7 @@
 
 .fadeIn {
   animation-name: fadeIn;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-fill-mode: both;
   animation-timing-function: ease-out;
 }
