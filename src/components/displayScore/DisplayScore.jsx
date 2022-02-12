@@ -30,7 +30,7 @@ function DisplayScore(props) {
       <div className='card-container card-container__score'> 
         <div className="card card__score">
           <p style={{ margin: "auto 0 auto auto" }}>You scored</p> 
-          <div className="number">{ props.totalScore()}</div> 
+          <div className="number fadeIn">{ props.totalScore()}</div> 
           <p style={{ margin: "auto auto auto 0"  }}>out of {props.qAmount}</p>
         </div>
         <div className="card card__score--comment fadeIn">{scoreComment()}</div>

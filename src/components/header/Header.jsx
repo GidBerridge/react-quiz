@@ -1,5 +1,6 @@
 import React from "react"
 import './Header.scss' 
+import Subheading from "./Subheading"
 
 const Header = () => {
     return (
@@ -7,6 +8,7 @@ const Header = () => {
         <div className="header">
             ZappaQuiz
         </div>
+        <Subheading />
         </>
         
     )

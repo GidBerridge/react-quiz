@@ -1,5 +1,6 @@
 .header {
   background-color: #3a0b18;
+  // background-color: var(--color-psy-dark-blue);
   width: 100vw;
   color: rgb(196, 194, 194);
   font-size: 6rem;
@@ -20,10 +21,10 @@
   margin: 0 auto 1.5rem auto;
   padding: 1rem 0.5rem;
   height: min-content;
+  margin-top: 5rem;
 
   &__text {
     text-align: center;
-    // color: #e6e6e6;
   }
 
   @media screen and (max-width: 710px) {

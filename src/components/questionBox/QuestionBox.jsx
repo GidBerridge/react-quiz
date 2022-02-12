@@ -135,7 +135,7 @@ function QuestionBox(props) {
 			/>
             : (
 				<>
-					<Subheading />
+					
 					<div className='card card__question'>
 						<div className='question-section'>
 							<div className='question-count'>

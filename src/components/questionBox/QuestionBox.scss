@@ -1,12 +1,14 @@
-/* media query needed on bg image and q_box width for phones */
-
 .card-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  // justify-content: center;
   align-items: center;
   margin: auto;
   width: 100%;
+
+  @media screen and (min-width: 710px) {
+    height: calc(100vh - 5rem);
+  }
 
   &__score {
     height: calc(100vh - 5rem);
@@ -35,25 +37,37 @@
   }
 
   &__score {
-    background-color: #d87c57de;
+    background-color: #0c6313c4;
+    // background-color: var(--color-psy-pink);
     font-size: 1.5rem;
     padding: 1rem 2rem;
 
     &--comment {
       background-color: #77231de0;
+      // background-color: var(--color-psy-mid-blue);
       font-size: 2.5rem;
+      text-align: center;
+
       @media screen and (max-width: 710px) {
-        margin: 2rem auto;
+        margin: 1rem auto;
+        width: 70%;
+        padding: 0.7rem 1.5rem;
       }
+    }
+
+    & p {
+      text-align: center;
     }
   }
 
   &__try-again {
     max-width: 10rem;
+    // background-color: var(--color-psy-green);
     background-color: #0c1a44aa;
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     padding: 1.5rem;
+    border: 2px solid #fff;
   }
 
   &__retry {
@@ -63,7 +77,15 @@
 
 .number {
   font-size: 5rem;
-  padding: 0 1.5rem;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: 710px) {
+    padding: 0 1rem 1rem 1rem;
+  }
 }
 
 button {
