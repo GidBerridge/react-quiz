@@ -19,7 +19,6 @@
   border-radius: 15px;
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
   padding: 2rem;
-  margin: 20% auto;
 
   @media screen and (min-width: 710px) {
     display: flex;
@@ -28,6 +27,7 @@
   &__question {
     background-color: #0c1a44aa;
     width: 40rem;
+    margin: 20% auto;
 
     @media screen and (max-width: 710px) {
       width: 20rem;
@@ -38,15 +38,19 @@
 
   &__score {
     background-color: #0c6313c4;
-    // background-color: var(--color-psy-pink);
     font-size: 1.5rem;
     padding: 1rem 2rem;
+    margin: 25% auto;
+
+    @media screen and (max-width: 710px) {
+      margin: 12% auto;
+    }
 
     &--comment {
       background-color: #77231de0;
-      // background-color: var(--color-psy-mid-blue);
       font-size: 2.5rem;
       text-align: center;
+      margin: 0 auto;
 
       @media screen and (max-width: 710px) {
         margin: 1rem auto;
@@ -62,12 +66,16 @@
 
   &__try-again {
     max-width: 10rem;
-    // background-color: var(--color-psy-green);
     background-color: #0c1a44aa;
     color: #fff;
     font-size: 1.4rem;
     padding: 1.5rem;
     border: 2px solid #fff;
+    margin: 20% auto;
+
+    @media screen and (max-width: 710px) {
+      margin: 12% auto;
+    }
   }
 
   &__retry {
@@ -101,9 +109,10 @@ button {
   border: 5px solid #234668;
   cursor: pointer;
 }
-
-button:hover {
-  background-color: rgb(248, 181, 80);
+@media screen and (min-width: 711px) {
+  button:hover {
+    background-color: rgb(248, 181, 80);
+  }
 }
 
 button:focus {
@@ -138,6 +147,7 @@ button svg {
 
 .question-text {
   margin-bottom: 12px;
+  font-size: 1.2rem;
 }
 
 .timer-text {

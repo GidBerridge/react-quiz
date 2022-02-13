@@ -12,7 +12,7 @@ const Header = () => {
     const handleShow = () => {
     setTimeout(() => {
       setIsActive(false)
-    }, 7000)
+    }, 3500)
     
   }
 
