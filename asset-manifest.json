@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/zappa-quiz/static/css/main.06520a1c.chunk.css",
+    "main.css": "/zappa-quiz/static/css/main.4c30f881.chunk.css",
     "main.js": "/zappa-quiz/static/js/main.683aee47.chunk.js",
     "main.js.map": "/zappa-quiz/static/js/main.683aee47.chunk.js.map",
     "runtime-main.js": "/zappa-quiz/static/js/runtime-main.71d4b733.js",
@@ -8,16 +8,16 @@
     "static/js/2.5cb2f71a.chunk.js": "/zappa-quiz/static/js/2.5cb2f71a.chunk.js",
     "static/js/2.5cb2f71a.chunk.js.map": "/zappa-quiz/static/js/2.5cb2f71a.chunk.js.map",
     "index.html": "/zappa-quiz/index.html",
-    "precache-manifest.c8f598e2fe3b723b34ca5572df1dc20a.js": "/zappa-quiz/precache-manifest.c8f598e2fe3b723b34ca5572df1dc20a.js",
+    "precache-manifest.32c33ec18fc5586074c7e8d81d5c9442.js": "/zappa-quiz/precache-manifest.32c33ec18fc5586074c7e8d81d5c9442.js",
     "service-worker.js": "/zappa-quiz/service-worker.js",
-    "static/css/main.06520a1c.chunk.css.map": "/zappa-quiz/static/css/main.06520a1c.chunk.css.map",
+    "static/css/main.4c30f881.chunk.css.map": "/zappa-quiz/static/css/main.4c30f881.chunk.css.map",
     "static/js/2.5cb2f71a.chunk.js.LICENSE.txt": "/zappa-quiz/static/js/2.5cb2f71a.chunk.js.LICENSE.txt",
     "static/media/index.css": "/zappa-quiz/static/media/zappa_bg_ol.b22a4a02.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.71d4b733.js",
     "static/js/2.5cb2f71a.chunk.js",
-    "static/css/main.06520a1c.chunk.css",
+    "static/css/main.4c30f881.chunk.css",
     "static/js/main.683aee47.chunk.js"
   ]
 }

@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "61fc9e85ccf3ab690941ff33f32e92f6",
+    "revision": "64a69c280a5eb720106e66ed3b23e41c",
     "url": "/zappa-quiz/index.html"
   },
   {
-    "revision": "fab8f988ddf008b37a2a",
-    "url": "/zappa-quiz/static/css/main.06520a1c.chunk.css"
+    "revision": "b4d7c30c91827771b6ae",
+    "url": "/zappa-quiz/static/css/main.4c30f881.chunk.css"
   },
   {
     "revision": "5dd0d1281eeeb6a78170",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/zappa-quiz/static/js/2.5cb2f71a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "fab8f988ddf008b37a2a",
+    "revision": "b4d7c30c91827771b6ae",
     "url": "/zappa-quiz/static/js/main.683aee47.chunk.js"
   },
   {
