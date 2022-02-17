@@ -78,6 +78,11 @@
     @media screen and (max-width: 710px) {
       margin: 12% auto;
     }
+
+    &:hover {
+      background-color: #23f717c4;
+      transform: scale(1.1);
+    }
   }
 
   &__retry {
