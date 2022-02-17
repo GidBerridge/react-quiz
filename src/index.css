@@ -3,6 +3,7 @@
   color: #fff;
 }
 body {
+  height: 100%;
   background-image: url('img/zappa_bg_ol.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -18,16 +19,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  @media screen and (min-width: 711px) {
-  }
 }
 :root {
-  --color-psy-pink: #ff4fbe;
-  --color-psy-pale-pink: #ff8bc5;
-  --color-psy-light-blue: #00e9ff;
-  --color-psy-mid-blue: #00a1ff;
-  --color-psy-dark-blue: #0064f0;
-  --color-psy-yellow: #fffc2a;
-  --color-psy-green: #55ff2a;
+  --color-card-primary: #0c1a44aa;
+  --color-button-primary: #ecca33;
+  --color-button-hover: #f8b550;
+  --color-button-border: #234668;
 }
