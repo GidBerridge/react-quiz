@@ -5,12 +5,13 @@
   margin: auto;
   width: 100%;
 
-  @media screen and (min-width: 710px) {
-    height: calc(100vh - 5rem);
-  }
-
   &__score {
     height: calc(100vh - 5rem);
+    justify-content: center;
+
+    @media screen and (min-width: 710px) {
+      height: calc(100vh - 11rem);
+    }
   }
 }
 .card {
@@ -25,19 +26,19 @@
   }
 
   &__question {
-    background-color: #0c1a44aa;
+    background-color: var(--color-card-primary);
     width: 40rem;
     margin: 20% auto;
 
     @media screen and (max-width: 710px) {
       width: 20rem;
       height: 30rem;
-      margin-top: 40%;
+      margin-top: 35%;
     }
   }
 
   &__score {
-    background-color: #0c6313c4;
+    background-color: var(--color-card-primary);
     font-size: 1.5rem;
     padding: 1rem 2rem;
     margin: 25% auto;
@@ -47,10 +48,11 @@
     }
 
     &--comment {
-      background-color: #77231de0;
+      background-color: var(--color-button-hover);
       font-size: 2.5rem;
       text-align: center;
       margin: 0 auto;
+      color: #000;
 
       @media screen and (max-width: 710px) {
         margin: 1rem auto;
@@ -66,12 +68,12 @@
 
   &__try-again {
     max-width: 10rem;
-    background-color: #0c1a44aa;
+    background-color: var(--color-card-primary);
     color: #fff;
     font-size: 1.4rem;
     padding: 1.5rem;
     border: 2px solid #fff;
-    margin: 20% auto;
+    margin: 20% auto 40% auto;
 
     @media screen and (max-width: 710px) {
       margin: 12% auto;
@@ -100,18 +102,18 @@ button {
   width: 100%;
   font-size: 16px;
   color: #000;
-  background-color: #ecca33;
+  background-color: var(--color-button-primary);
   border-radius: 15px;
   display: flex;
   padding: 5px;
   justify-content: flex-start;
   align-items: center;
-  border: 5px solid #234668;
+  border: 5px solid var(--color-button-border);
   cursor: pointer;
 }
 @media screen and (min-width: 711px) {
   button:hover {
-    background-color: rgb(248, 181, 80);
+    background-color: var(--color-button-hover);
   }
 }
 
