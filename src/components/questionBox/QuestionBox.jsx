@@ -98,6 +98,17 @@ function QuestionBox(props) {
 		},
 	];
 
+	const questions2 = () => {
+		console.log('test')
+		fetch('https://api.airtable.com/v0/apppqTCPQGmQOEoi7/zappaQuiz?api_key=4EHjHf99psrakN')
+			.then(res => res.json())
+			 .then((data) => {
+      			console.log(data);
+    		})
+			.catch(error => console.log(error))
+		
+	}
+
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);
@@ -128,6 +139,7 @@ function QuestionBox(props) {
 	return (
 		
 		<div className='card-container'>
+			{questions2()}
 			{showScore ? 
             <DisplayScore 
 			qAmount={questions.length}
@@ -135,7 +147,6 @@ function QuestionBox(props) {
 			/>
             : (
 				<>
-					
 					<div className='card card__question fadeIn'>
 						<div className='question-section'>
 							<div className='question-count'>
