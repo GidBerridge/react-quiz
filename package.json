@@ -1,12 +1,13 @@
 {
   "name": "zappaQuiz",
-  "homepage": "https://gidberridge.github.io/react-quiz/",
+  "homepage": "https://gidberridge.github.io/zappa-quiz/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "airtable": "^0.11.2",
     "gh-pages": "^3.2.3",
     "node-sass": "4.14.1",
     "react": "^16.13.1",
