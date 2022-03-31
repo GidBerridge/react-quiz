@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dcc462583a6daaef2f7a1704edb8d483",
+    "revision": "21a1fb64dfef3684aee7e14a4dfadb22",
     "url": "/zappa-quiz/index.html"
   },
   {
