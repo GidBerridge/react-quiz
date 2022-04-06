@@ -1,6 +1,5 @@
 .header {
   background-color: #3a0b18;
-  // background-color: var(--color-psy-dark-blue);
   width: 100vw;
   color: rgb(196, 194, 194);
   font-size: 6rem;
@@ -44,9 +43,11 @@
   0% {
     opacity: 1;
   }
+
   75% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
     // height: 0;
@@ -64,9 +65,11 @@
   0% {
     opacity: 0;
   }
+
   40% {
     opacity: 0;
   }
+
   55% {
     opacity: 1;
   }
@@ -74,6 +77,7 @@
   75% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
