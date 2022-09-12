@@ -14,7 +14,6 @@ const Main = () => {
     
     return (
         <>
-        test
           <div className="main">
             {handleShow()}
             {isActive ? <Subheading /> : <QuestionBox/>}
