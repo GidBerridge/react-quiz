@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import DisplayScore from '../displayScore/DisplayScore.jsx';
-import Subheading from '../header/Subheading.js'
+import Subheading from "../subheading/Subheading"
 import './QuestionBox.scss'
 
 

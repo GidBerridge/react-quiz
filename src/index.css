@@ -3,12 +3,7 @@
   color: #fff;
 }
 body {
-  height: 100%;
-  background-image: url('img/zappa_bg_ol.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
+  
 
   display: flex;
   justify-content: center;
@@ -20,6 +15,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
+
 :root {
   --color-card-primary: #0c1a44aa;
   --color-button-primary: #ecca33;
