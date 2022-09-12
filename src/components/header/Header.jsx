@@ -19,7 +19,7 @@ const Header = () => {
   return (
     <>
       <div className="header">
-        ZappaQuiz
+        Zappaquiz
       </div>
       {handleShow()}
       {isActive ? <Subheading /> : <QuestionBox />}
