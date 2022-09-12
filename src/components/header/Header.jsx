@@ -1,33 +1,20 @@
-import React, { useState } from "react"
-import QuestionBox from "../questionBox/QuestionBox"
-import './Header.scss'
-import Subheading from "./Subheading"
-
-
-
+import React from 'react'
+import './Header.scss' 
 
 const Header = () => {
-  const [isActive, setIsActive] = useState(true)
-
-  const handleShow = () => {
-    setTimeout(() => {
-      setIsActive(false)
-    }, 3500)
-
-  }
-
-  return (
-    <>
-      <div className="header">
-        Zappaquiz
-      </div>
-      {handleShow()}
-      {isActive ? <Subheading /> : <QuestionBox />}
+    
+    return (
+        <>
+        
+          <div className="header">
+              ZappaQuiz
+          </div>
+               
+        </>
+        
+    )
 
 
-    </>
-
-  )
 }
 
 export default Header

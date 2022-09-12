@@ -17,20 +17,24 @@
 .subheading {
   width: 80%;
   font-size: 2rem;
-  margin: 0 auto 1.5rem auto;
+  margin: auto;
   padding: 1rem 0.5rem;
-  height: min-content;
-  margin-top: 5rem;
+  height: 100vh;
+
 
   &__text {
     text-align: center;
   }
+
+  
 
   @media screen and (max-width: 710px) {
     font-size: 1.5rem;
     margin-top: 1rem;
   }
 }
+
+
 
 .fadeOut_1 {
   animation-name: fadeOut_1;
