@@ -10,11 +10,8 @@ const Header = () => {
               ZappaQuiz
           </div>
                
-        </>
-        
+        </>       
     )
-
-
 }
 
 export default Header
