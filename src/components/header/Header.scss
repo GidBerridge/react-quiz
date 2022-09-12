@@ -1,12 +1,9 @@
 .header {
   background-color: #3a0b18;
-  width: 100%;
   color: rgb(196, 194, 194);
   font-size: 6rem;
   font-family: 'Architects Daughter', cursive;
   text-align: center;
-  top: 0;
-  left: 0;
   padding: 1rem;
 
   @media screen and (max-width: 710px) {
@@ -54,7 +51,7 @@
 
   100% {
     opacity: 0;
-    // height: 0;
+
   }
 }
 
