@@ -29,12 +29,12 @@
   &__question {
     background-color: var(--color-card-primary);
     width: 40rem;
-    margin: 20% auto;
+
 
     @media screen and (max-width: 710px) {
       width: 20rem;
       height: 20rem;
-      margin-top: 35%;
+
     }
   }
 
