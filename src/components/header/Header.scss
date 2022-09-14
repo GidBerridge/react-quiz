@@ -1,12 +1,9 @@
 .header {
   background-color: #3a0b18;
-  width: 100%;
   color: rgb(196, 194, 194);
   font-size: 6rem;
   font-family: 'Architects Daughter', cursive;
   text-align: center;
-  top: 0;
-  left: 0;
   padding: 1rem;
 
   @media screen and (max-width: 710px) {
@@ -17,20 +14,23 @@
 .subheading {
   width: 80%;
   font-size: 2rem;
-  margin: 0 auto 1.5rem auto;
+  margin: auto;
   padding: 1rem 0.5rem;
-  height: min-content;
-  margin-top: 5rem;
+
 
   &__text {
     text-align: center;
   }
+
+  
 
   @media screen and (max-width: 710px) {
     font-size: 1.5rem;
     margin-top: 1rem;
   }
 }
+
+
 
 .fadeOut_1 {
   animation-name: fadeOut_1;
@@ -50,7 +50,7 @@
 
   100% {
     opacity: 0;
-    // height: 0;
+
   }
 }
 

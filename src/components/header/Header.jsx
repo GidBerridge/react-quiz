@@ -1,12 +1,8 @@
-import React, { useState } from "react"
-import QuestionBox from "../questionBox/QuestionBox"
+import React from 'react'
 import './Header.scss'
-import Subheading from "./Subheading"
-
-
-
 
 const Header = () => {
+<<<<<<< HEAD
   const [isActive, setIsActive] = useState(true)
 
   const handleShow = () => {
@@ -28,6 +24,18 @@ const Header = () => {
     </>
 
   )
+=======
+
+    return (
+        <>
+
+          <div className="header">
+              ZappaQuiz
+          </div>
+
+        </>
+    )
+>>>>>>> b467a1b4dfc10818bbe6988f7f8577a38ffc4c5a
 }
 
 export default Header
