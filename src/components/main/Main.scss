@@ -1,10 +1,15 @@
 .main {
-    height: 100vh;
-    background-image: url('../../img/zappa_bg_ol.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: calc(100vh - 10rem);
+  background-image: url('../../img/zappa_bg_ol.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: 710px) {
+    height: calc(100vh - 6rem);
+
   }
+}
