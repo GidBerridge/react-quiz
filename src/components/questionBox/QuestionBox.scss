@@ -27,15 +27,7 @@
   }
 
   &__question {
-    background-color: rgba(58, 11, 24, 0.7);
-    width: 40rem;
-
-
-    @media screen and (max-width: 710px) {
-      width: 20rem;
-      height: 20rem;
-
-    }
+    background-color: var(--color-card-primary);
   }
 
   &__score {
