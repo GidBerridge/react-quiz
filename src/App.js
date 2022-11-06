@@ -2,14 +2,17 @@ import React from 'react'
 import './index.css'
 import Header from './components/header/Header.jsx'
 import Main from './components/main/Main.jsx'
-import QuestionBox from './components/questionBox/QuestionBox.jsx'
+import Container from "react-bootstrap/Container"
+
 
 function App() {
   return (
-    <>
+  <>
+    <Container>
       <Header />
       <Main />
-    </>
+    </Container>
+  </>
   )
 }
 

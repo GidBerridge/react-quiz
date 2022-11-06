@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #3a0b18;
+  background-color: #f2f2f2;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -16,7 +16,8 @@ body {
 
 :root {
   --color-card-primary: #0c1a44aa;
-  --color-button-primary: #ecca33;
+  --color-button-primary: #fdab48e5;
   --color-button-hover: #f8b550;
   --color-button-border: #234668;
+  background-color: #3a0b18;
 }

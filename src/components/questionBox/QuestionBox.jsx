@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import DisplayScore from '../displayScore/DisplayScore.jsx';
-import Subheading from "../subheading/Subheading"
+import Col from "react-bootstrap/Col"
 import './QuestionBox.scss'
 
 
@@ -55,9 +55,9 @@ function QuestionBox(props) {
 			questionText: 'Where was Frank born?',
 			answerOptions: [
 				{ answerText: 'Los Angeles, California', isCorrect: false },
-				{ answerText: 'Baltimore, Maryland', isCorrect: true  },
+				{ answerText: 'Baltimore, Maryland', isCorrect: true },
 				{ answerText: 'Cleveland, Ohio', isCorrect: false },
-				{ answerText: 'Lancaster, California', isCorrect: false},
+				{ answerText: 'Lancaster, California', isCorrect: false },
 			],
 		},
 		{
@@ -65,8 +65,8 @@ function QuestionBox(props) {
 			answerOptions: [
 				{ answerText: 'Ian Underwood', isCorrect: false },
 				{ answerText: 'Scott Thunes', isCorrect: false },
-				{ answerText: 'Jimmy Carl Black', isCorrect: true  },
-				{ answerText: 'Captain Beefheart', isCorrect: false},
+				{ answerText: 'Jimmy Carl Black', isCorrect: true },
+				{ answerText: 'Captain Beefheart', isCorrect: false },
 			],
 		},
 		{
@@ -75,7 +75,7 @@ function QuestionBox(props) {
 				{ answerText: 'Lumpy Gravy', isCorrect: true },
 				{ answerText: "We're only in it for the money", isCorrect: false },
 				{ answerText: 'One size fits all', isCorrect: false },
-				{ answerText: 'Broadway the Hardway', isCorrect: false},
+				{ answerText: 'Broadway the Hardway', isCorrect: false },
 			],
 		},
 		{
@@ -84,7 +84,7 @@ function QuestionBox(props) {
 				{ answerText: 'Vivaldi', isCorrect: false },
 				{ answerText: "Pierre Boulez", isCorrect: false },
 				{ answerText: 'Edgard Varesse', isCorrect: true },
-				{ answerText: 'Igor Stravinsky', isCorrect: false},
+				{ answerText: 'Igor Stravinsky', isCorrect: false },
 			],
 		},
 		{
@@ -92,8 +92,8 @@ function QuestionBox(props) {
 			answerOptions: [
 				{ answerText: 'Guitar', isCorrect: false },
 				{ answerText: "Drums", isCorrect: true },
-				{ answerText: 'Double Bass', isCorrect: false},
-				{ answerText: 'Alto Sax', isCorrect: false},
+				{ answerText: 'Double Bass', isCorrect: false },
+				{ answerText: 'Alto Sax', isCorrect: false },
 			],
 		},
 	];
@@ -102,11 +102,11 @@ function QuestionBox(props) {
 		console.log('test')
 		fetch('https://api.airtable.com/v0/apppqTCPQGmQOEoi7/zappaQuiz?api_key=4EHjHf99psrakN')
 			.then(res => res.json())
-			 .then((data) => {
-      			console.log(data);
-    		})
+			.then((data) => {
+				console.log(data);
+			})
 			.catch(error => console.log(error))
-		
+
 	}
 
 	const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -120,7 +120,7 @@ function QuestionBox(props) {
 	}
 
 	const handleAnswerOptionClick = (isCorrect) => {
-		
+
 		if (isCorrect) {
 			setScore(score + 1);
 		}
@@ -137,31 +137,31 @@ function QuestionBox(props) {
 
 
 	return (
-		
+
 		<div className='card-container'>
 			{questions2()}
-			{showScore ? 
-            <DisplayScore 
-			qAmount={questions.length}
-			totalScore={handleScore}
-			/>
-            : (
-				<>
-					<div className='card card__question fadeIn'>
-						<div className='question-section'>
-							<div className='question-count'>
-								<span>Question {currentQuestion + 1}</span>/{questions.length}
+			{showScore ?
+				<DisplayScore
+					qAmount={questions.length}
+					totalScore={handleScore}
+				/>
+				: (
+					<>
+						<div className='card card__question fadeIn  col-12 col-md-6'>
+							<div className='question-section'>
+								<div className='question-count'>
+									<span>Question {currentQuestion + 1}</span>/{questions.length}
+								</div>
+								<div className='question-text'>{questions[currentQuestion].questionText}</div>
 							</div>
-							<div className='question-text'>{questions[currentQuestion].questionText}</div>
+							<div className='answer-section'>
+								{questions[currentQuestion].answerOptions.map((answerOption) => (
+									<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+								))}
+							</div>
 						</div>
-						<div className='answer-section'>
-							{questions[currentQuestion].answerOptions.map((answerOption) => (
-								<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
-							))}
-						</div>
-					</div>
-				</>
-			)}
+					</>
+				)}
 		</div>
 	);
 }
