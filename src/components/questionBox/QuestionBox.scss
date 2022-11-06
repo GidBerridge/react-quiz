@@ -20,7 +20,7 @@
   border: 1px solid #000;
   border-radius: 15px;
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
-  padding: 2rem;
+  // padding: 2rem;
 
   @media screen and (min-width: 710px) {
     display: flex;
@@ -126,16 +126,16 @@ button svg {
 
 /* ANSWERS/RIGHT SECTION */
 .answer-section {
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-bottom: 0.5rem;
 }
 
-/* QUESTION/TIMER/LEFT SECTION */
+/* QUESTION SECTION */
 .question-section {
-  width: 100%;
-  position: relative;
+  // width: 100%;
+  // position: relative;
 }
 
 .question-count {

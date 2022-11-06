@@ -147,22 +147,23 @@ function QuestionBox(props) {
 				/>
 				: (
 					<>
-						<div className='card card__question fadeIn  col-12 col-md-6'>
-							<div className='question-section'>
+						<div className='card p-3 p-md-4 card__question fadeIn col-12 col-md-8 col-xl-6 row'>
+							<div className='question-section col-12 col-md-6'>
 								<div className='question-count'>
 									<span>Question {currentQuestion + 1}</span>/{questions.length}
 								</div>
 								<div className='question-text'>{questions[currentQuestion].questionText}</div>
 							</div>
-							<div className='answer-section'>
+							<div className='answer-section col-12 col-md-6'>
 								{questions[currentQuestion].answerOptions.map((answerOption) => (
-									<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+									<button className='mb-1' onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
 								))}
 							</div>
 						</div>
 					</>
-				)}
-		</div>
+				)
+			}
+		</div >
 	);
 }
 
