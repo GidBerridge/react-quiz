@@ -18,57 +18,46 @@
 
 }
 
-
-.wavy {
-  animation-name: flip;
-  display: inline-block;
-  animation-duration: 3s;
-  color: #66fefb;
-}
-
 .color-change {
-  animation: colorChange 5s linear infinite;
-  // color: #66fefb;
-}
-
-@keyframes flip {
-
-  0%,
-  10% {
-    transform: rotateY(360deg);
-  }
+  animation: colorChange 2.5s linear infinite;
 }
 
 @keyframes colorChange {
 
-  0% {
-    opacity: 0;
-    color: #5c039c;
+  0%,
+  90% {
+    transform: rotateY(360deg)
   }
 
-  10% {
-    transform: rotateY(360deg);
+  0% {
+    color: #a326fc;
+    scale: 0.8;
   }
 
   20% {
     color: #fc0f33;
+    scale: 1.2;
   }
 
   40% {
     color: #fb9724;
+    scale: 0.8;
   }
 
   60% {
     color: #fff42b;
+    scale: 1.2;
   }
 
   80% {
     color: #82fe66;
+    scale: 0.8;
   }
 
+
   100% {
-    opacity: 1;
-    color: #66fefb;
+    color: #a326fc;
+    scale: 0.8;
   }
 }
 
