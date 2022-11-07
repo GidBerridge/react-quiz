@@ -6,3 +6,117 @@
   background-color: #d87c57;
   justify-content: center;
 }
+
+.number {
+  font-size: 5rem;
+  line-height: 4.25rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.wavy {
+  animation-name: flip;
+  display: inline-block;
+  animation-duration: 3s;
+  color: #66fefb;
+}
+
+.color-change {
+  animation: colorChange 5s linear infinite;
+  // color: #66fefb;
+}
+
+@keyframes flip {
+
+  0%,
+  10% {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes colorChange {
+
+  0% {
+    opacity: 0;
+    color: #5c039c;
+  }
+
+  10% {
+    transform: rotateY(360deg);
+  }
+
+  20% {
+    color: #fc0f33;
+  }
+
+  40% {
+    color: #fb9724;
+  }
+
+  60% {
+    color: #fff42b;
+  }
+
+  80% {
+    color: #82fe66;
+  }
+
+  100% {
+    opacity: 1;
+    color: #66fefb;
+  }
+}
+
+.glow-on-hover {
+  border: none;
+  outline: none;
+  background: #edf0f0;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(45deg, #7a00ff, #ddcaf1, #301b3f);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #edf0f0;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}

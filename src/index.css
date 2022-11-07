@@ -6,9 +6,9 @@
 body {
   background-color: #f2f2f2;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -18,6 +18,6 @@ body {
   --color-card-primary: #0c1a44aa;
   --color-button-primary: #fdab48e5;
   --color-button-hover: #f8b550;
-  --color-button-border: #234668;
+  --color-button-border: #3a0b18;
   background-color: #3a0b18;
 }
