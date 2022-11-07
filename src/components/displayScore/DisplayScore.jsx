@@ -30,7 +30,7 @@ function DisplayScore(props) {
       <div className='card-container card-container__score'>
         <div className="card card__score">
           <p className="m-0">You scored</p>
-          <div className="number wavy color-change">
+          <div className="number color-change">
             {props.totalScore()}
           </div>
           <p className="m-0">out of {props.qAmount}</p>
