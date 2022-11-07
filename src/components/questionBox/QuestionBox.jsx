@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import DisplayScore from '../displayScore/DisplayScore.jsx';
-import Col from "react-bootstrap/Col"
 import './QuestionBox.scss'
 
 
@@ -147,17 +146,19 @@ function QuestionBox(props) {
 				/>
 				: (
 					<>
-						<div className='card p-3 p-md-4 card__question fadeIn col-12 col-md-8 col-xl-6 row'>
-							<div className='question-section col-12 col-md-6'>
-								<div className='question-count'>
-									<span>Question {currentQuestion + 1}</span>/{questions.length}
+						<div className='card p-3 p-md-4 card__question fadeIn col-12 col-md-8 col-xl-6'>
+							<div className='row'>
+								<div className='question-section col-12 col-lg-6'>
+									<div className='question-count'>
+										<span>Question {currentQuestion + 1}</span>/{questions.length}
+									</div>
+									<div className='question-text'>{questions[currentQuestion].questionText}</div>
 								</div>
-								<div className='question-text'>{questions[currentQuestion].questionText}</div>
-							</div>
-							<div className='answer-section col-12 col-md-6'>
-								{questions[currentQuestion].answerOptions.map((answerOption) => (
-									<button className='mb-1' onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
-								))}
+								<div className='answer-section col-12 col-lg-6'>
+									{questions[currentQuestion].answerOptions.map((answerOption) => (
+										<button className='mb-2' onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+									))}
+								</div>
 							</div>
 						</div>
 					</>

@@ -27,14 +27,16 @@ function DisplayScore(props) {
 
   return (
     <FadeIn>
-      <div className='card-container card-container__score'> 
+      <div className='card-container card-container__score'>
         <div className="card card__score">
-          <p style={{ margin: "auto 0 auto auto" }}>You scored</p> 
-          <div className="number fadeIn">{ props.totalScore()}</div> 
-          <p style={{ margin: "auto auto auto 0"  }}>out of {props.qAmount}</p>
+          <p className="m-0">You scored</p>
+          <div className="number wavy color-change">
+            {props.totalScore()}
+          </div>
+          <p className="m-0">out of {props.qAmount}</p>
         </div>
         <div className="card card__score--comment fadeIn">{scoreComment()}</div>
-        <div className="card card__try-again" onClick={refreshPage}>Try again?</div>      
+        <div className="card card__try-again glow-on-hover" onClick={refreshPage}>Try again?</div>
       </div>
     </FadeIn>
   )

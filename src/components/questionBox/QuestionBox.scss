@@ -40,18 +40,14 @@
       margin: 12% auto;
     }
 
+
     &--comment {
-      background-color: var(--color-button-hover);
+      background-color: var(--color-button-primary);
       font-size: 2.5rem;
       text-align: center;
       margin: 0 auto;
       color: #000;
-
-      @media screen and (max-width: 710px) {
-        margin: 1rem auto;
-        width: 70%;
-        padding: 0.7rem 1.5rem;
-      }
+      padding: 0.7rem 1.5rem;
     }
 
     & p {
@@ -83,30 +79,19 @@
   }
 }
 
-.number {
-  font-size: 5rem;
-  padding: 0 1.5rem 1.5rem 1.5rem;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-  @media screen and (max-width: 710px) {
-    padding: 0 1rem 1rem 1rem;
-  }
-}
 
 button {
   width: 100%;
   font-size: 16px;
   color: #000;
   background-color: var(--color-button-primary);
-  border-radius: 15px;
+  border-radius: 10px;
   display: flex;
   padding: 5px;
   justify-content: flex-start;
   align-items: center;
-  border: 5px solid var(--color-button-border);
+  border: 2px solid var(--color-button-border);
   cursor: pointer;
 }
 
@@ -129,7 +114,7 @@ button svg {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 0.5rem;
+
 }
 
 /* QUESTION SECTION */
