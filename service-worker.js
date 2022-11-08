@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/zappa-quiz/precache-manifest.cf03964fe34e44ae971972d3ba853aea.js"
+  "/zappa-quiz/precache-manifest.bf1bd0b7f646e8af32ca8c36770c88f2.js"
 );
 
 self.addEventListener('message', (event) => {
