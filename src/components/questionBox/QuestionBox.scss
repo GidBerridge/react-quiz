@@ -5,13 +5,10 @@
   margin: auto;
   width: 100%;
 
-  &__score {
-    height: calc(100vh - 5rem);
-    justify-content: center;
 
-    @media screen and (min-width: 710px) {
-      height: calc(100vh - 11rem);
-    }
+  &__score {
+    padding: 1rem;
+    justify-content: center;
   }
 }
 
@@ -20,7 +17,6 @@
   border: 1px solid #000;
   border-radius: 15px;
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
-  // padding: 2rem;
 
   @media screen and (min-width: 710px) {
     display: flex;
@@ -34,20 +30,16 @@
     background-color: var(--color-card-primary);
     font-size: 1.5rem;
     padding: 1rem 2rem;
-    margin: 25% auto;
-
-    @media screen and (max-width: 710px) {
-      margin: 12% auto;
-    }
+    width: 100%;
 
 
     &--comment {
       background-color: var(--color-button-primary);
       font-size: 2.5rem;
       text-align: center;
-      margin: 0 auto;
       color: #000;
       padding: 0.7rem 1.5rem;
+      max-width: 24rem;
     }
 
     & p {
@@ -56,22 +48,11 @@
   }
 
   &__try-again {
-    max-width: 10rem;
-    background-color: var(--color-card-primary);
+    width: 100%;
     color: #fff;
     font-size: 1.4rem;
     padding: 1.5rem;
-    border: 2px solid #fff;
-    margin: 20% auto 40% auto;
-
-    @media screen and (max-width: 710px) {
-      margin: 12% auto;
-    }
-
-    &:hover {
-      background-color: #23f717c4;
-      transform: scale(1.1);
-    }
+    text-align: center;
   }
 
   &__retry {
@@ -118,10 +99,7 @@ button svg {
 }
 
 /* QUESTION SECTION */
-.question-section {
-  // width: 100%;
-  // position: relative;
-}
+.question-section {}
 
 .question-count {
   margin-bottom: 20px;
