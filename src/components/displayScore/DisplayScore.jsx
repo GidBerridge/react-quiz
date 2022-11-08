@@ -21,6 +21,7 @@ function DisplayScore(props) {
     return scoreText[props.totalScore()]
   }
 
+
   const refreshPage = () => {
     window.location.reload(false);
   }
@@ -35,11 +36,13 @@ function DisplayScore(props) {
           </div>
           <p className="m-0">out of {props.qAmount}</p>
         </div>
-        <div className="card card__score--comment fadeIn">{scoreComment()}</div>
-        <div className="card card__try-again glow-on-hover" onClick={refreshPage}>Try again?</div>
+        <div className="card card__score--comment">{scoreComment()}</div>
+        <div className="card card__try-again glow" onClick={refreshPage}>Try again?</div>
       </div>
     </FadeIn>
   )
 }
+
+
 
 export default DisplayScore
