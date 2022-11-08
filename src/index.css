@@ -17,4 +17,10 @@ body {
   --color-button-hover: #f8b550;
   --color-button-border: #3a0b18;
   background-color: #3a0b18;
+
+  --color-primary: #f6aca2;
+  --color-secondary: #f49b90;
+  --color-tertiary: #f28b7d;
+  --color-quaternary: #f07a6a;
+  --color-quinary: #ee6352;
 }
