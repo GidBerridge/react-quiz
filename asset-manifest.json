@@ -1,23 +1,14 @@
 {
   "files": {
-    "main.css": "/zappa-quiz/static/css/main.79db8d6f.chunk.css",
-    "main.js": "/zappa-quiz/static/js/main.2e69bead.chunk.js",
-    "main.js.map": "/zappa-quiz/static/js/main.2e69bead.chunk.js.map",
-    "runtime-main.js": "/zappa-quiz/static/js/runtime-main.020ccb72.js",
-    "runtime-main.js.map": "/zappa-quiz/static/js/runtime-main.020ccb72.js.map",
-    "static/js/2.4c07ac3c.chunk.js": "/zappa-quiz/static/js/2.4c07ac3c.chunk.js",
-    "static/js/2.4c07ac3c.chunk.js.map": "/zappa-quiz/static/js/2.4c07ac3c.chunk.js.map",
-    "index.html": "/zappa-quiz/index.html",
-    "precache-manifest.bf1bd0b7f646e8af32ca8c36770c88f2.js": "/zappa-quiz/precache-manifest.bf1bd0b7f646e8af32ca8c36770c88f2.js",
-    "service-worker.js": "/zappa-quiz/service-worker.js",
-    "static/css/main.79db8d6f.chunk.css.map": "/zappa-quiz/static/css/main.79db8d6f.chunk.css.map",
-    "static/js/2.4c07ac3c.chunk.js.LICENSE.txt": "/zappa-quiz/static/js/2.4c07ac3c.chunk.js.LICENSE.txt",
-    "static/media/Main.scss": "/zappa-quiz/static/media/zappa_bg_ol.b22a4a02.jpg"
+    "main.css": "./static/css/main.19e951e2.css",
+    "main.js": "./static/js/main.99d785ea.js",
+    "static/media/zappa_bg_ol.jpg": "./static/media/zappa_bg_ol.849c390d9865aeb1403d.jpg",
+    "index.html": "./index.html",
+    "main.19e951e2.css.map": "./static/css/main.19e951e2.css.map",
+    "main.99d785ea.js.map": "./static/js/main.99d785ea.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.020ccb72.js",
-    "static/js/2.4c07ac3c.chunk.js",
-    "static/css/main.79db8d6f.chunk.css",
-    "static/js/main.2e69bead.chunk.js"
+    "static/css/main.19e951e2.css",
+    "static/js/main.99d785ea.js"
   ]
 }
