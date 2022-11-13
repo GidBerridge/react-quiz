@@ -126,10 +126,14 @@ button svg {
   text-align: center;
 }
 
+.default {
+  background-color: var(--color-button-primary);
+}
+
 .correct {
-  background-color: #2f922f;
+  background-color: #2f922f !important;
 }
 
 .incorrect {
-  background-color: #ff3333;
+  background-color: #ff3333 !important;
 }
