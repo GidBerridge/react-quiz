@@ -36,7 +36,7 @@ function DisplayScore(props) {
           <p className="m-0">out of {props.qAmount}</p>
         </div>
         <div className="card card__score--comment text_shadows my-3">{scoreComment()}</div>
-        <div className="card card__try-again glow" onClick={refreshPage}>Try again?</div>
+        <div className="card card__try-again glow p-1 p-md-3" onClick={refreshPage}>Try again?</div>
       </div>
     </FadeIn>
   )
