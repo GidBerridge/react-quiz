@@ -7,7 +7,7 @@ const Header = () => {
         <>
 
             <div className="header">
-                <h1>
+                <h1 className='p-2 p-md-3 my-md-2'>
                     ZappaQuiz
                 </h1>
             </div>
