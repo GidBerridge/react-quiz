@@ -111,7 +111,7 @@ function QuestionBox(props) {
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);
-	const [backgroundColor, setBackgroundColor] = useState(false);
+	const [bgColor, setBgColor] = useState('default');
 
 
 
@@ -120,18 +120,15 @@ function QuestionBox(props) {
 	}
 
 	const handleCorrect = (isCorrect) => {
-		let bg = 'default'
+
 		if (isCorrect) {
 			console.log('true')
-			bg = 'correct'
+			return setBgColor('correct')
 		}
 		else {
 			console.log('false')
-			bg = 'incorrect'
+			return setBgColor('incorrect')
 		}
-		console.log(bg)
-		return bg
-
 	}
 
 	const handleAnswerOptionClick = (isCorrect) => {
@@ -173,10 +170,16 @@ function QuestionBox(props) {
 									</div>
 									<div className='question-text'>{questions[currentQuestion].questionText}</div>
 								</div>
+
+								{/* question has 4 answers. 
+								When button is clicked it checks to see if isCorrect is true.
+								If so bgColor state changes for that button */}
 								<div className='answer-section col-12 col-lg-6'>
-									{questions[currentQuestion].answerOptions.map((answerOption) => (
-										<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)} className='mb-2 ${handleCorrect}' >{answerOption.answerText}</button>
-									))}
+									<div className>
+										{questions[currentQuestion].answerOptions.map((answerOption) => (
+											<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)} className={bgColor}> {answerOption.answerText}</button>
+										))}
+									</div>
 								</div>
 							</div>
 						</div>
