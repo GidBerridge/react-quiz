@@ -7,95 +7,147 @@ function QuestionBox(props) {
 	const questions = [
 		{
 			questionText: 'Which of these does Frank Zappa have named after him?',
-			answerOptions: [
-				{ answerText: 'A comet - Zappa 421a', isCorrect: false },
-				{ answerText: 'A dinosaur - Zappasaurus', isCorrect: false },
-				{ answerText: 'A type of bacteria that causes acne - P. Acnes type Zappae', isCorrect: true },
-				{ answerText: 'An element of the periodic table - Zapponium (Za)', isCorrect: false },
-			],
+			answers: ['A comet - Zappa 421a', 'A dinosaur - Zappasaurus', 'A type of bacteria that causes acne - P. Acnes type Zappae', 'An element of the periodic table - Zapponium (Za)'],
+			correctAnswerIndex: 3
 		},
 		{
 			questionText: 'Which famous guest bass player played on the title track of Apostrophe?',
-			answerOptions: [
-				{ answerText: 'Greg Lake', isCorrect: false },
-				{ answerText: 'Jack Bruce', isCorrect: true },
-				{ answerText: 'Lemmy', isCorrect: false },
-				{ answerText: 'Bill Wyman', isCorrect: false },
-			],
+			answers: ['Greg Lake', 'Jack Bruce', 'Lemmy', 'Bill Wyman'],
+			correctAnswerIndex: 2
 		},
 		{
 			questionText: 'In January 1990, which country appointed Zappa as "Special Ambassador to the West on Trade, Culture and Tourism”?',
-			answerOptions: [
-				{ answerText: 'Czech Republic', isCorrect: true },
-				{ answerText: 'Poland', isCorrect: false },
-				{ answerText: 'Belarus', isCorrect: false },
-				{ answerText: 'Hungary', isCorrect: false },
-			],
+			answers: ['Czech Republic', 'Poland', 'Belarus', 'Hungary'],
+			correctAnswerIndex: 1
 		},
 		{
 			questionText: 'What was Franks middle name?',
-			answerOptions: [
-				{ answerText: 'Harold', isCorrect: false },
-				{ answerText: 'Bob', isCorrect: false },
-				{ answerText: 'David', isCorrect: false },
-				{ answerText: 'Vincent', isCorrect: true },
-			],
+			answers: ['Harold', 'Bob', 'David', 'Vincent',],
+			correctAnswerIndex: 4
 		},
 		{
 			questionText: 'In 1991, Zappa considered running for President. Who did he want as his vice president?',
-			answerOptions: [
-				{ answerText: 'Bill Clinton', isCorrect: false },
-				{ answerText: 'Jello Biafra (from the Dead Kennedys)', isCorrect: false },
-				{ answerText: 'Captain Beefheart', isCorrect: false },
-				{ answerText: 'Texas billionaire Ross Perot', isCorrect: true },
-			],
+			answers: ['Bill Clinton', 'Jello Biafra (of the Dead Kennedys)', 'Captain Beefheart', 'Ross Perot'],
+			correctAnswerIndex: 4
 		},
 		{
 			questionText: 'Where was Frank born?',
-			answerOptions: [
-				{ answerText: 'Los Angeles, California', isCorrect: false },
-				{ answerText: 'Baltimore, Maryland', isCorrect: true },
-				{ answerText: 'Cleveland, Ohio', isCorrect: false },
-				{ answerText: 'Lancaster, California', isCorrect: false },
-			],
+			answers: ['Los Angeles, California', 'Baltimore, Maryland', 'Cleveland, Ohio', 'Lancaster, California'],
+			correctAnswerIndex: 2
 		},
 		{
 			questionText: "Who was 'The Indian of the band'?",
-			answerOptions: [
-				{ answerText: 'Ian Underwood', isCorrect: false },
-				{ answerText: 'Scott Thunes', isCorrect: false },
-				{ answerText: 'Jimmy Carl Black', isCorrect: true },
-				{ answerText: 'Captain Beefheart', isCorrect: false },
-			],
+			answers: ['Ian Underwood', 'Scott Thunes', 'Jimmy Carl Black', 'Captain Beefheart'],
+			correctAnswerIndex: 3
 		},
 		{
 			questionText: "Which Zappa album features an excerpt from 'Run Home Slow', a theme tune Frank recorded for a Cowboy film in the 1960s?",
-			answerOptions: [
-				{ answerText: 'Lumpy Gravy', isCorrect: true },
-				{ answerText: "We're only in it for the money", isCorrect: false },
-				{ answerText: 'One size fits all', isCorrect: false },
-				{ answerText: 'Broadway the Hardway', isCorrect: false },
-			],
+			answers: ['Lumpy Gravy', "We're only in it for the money", 'One size fits all', 'Broadway the Hardway',],
+			correctAnswerIndex: 1
 		},
 		{
 			questionText: "Which composer did Frank often say was his biggest influence as a teenager?",
-			answerOptions: [
-				{ answerText: 'Vivaldi', isCorrect: false },
-				{ answerText: "Pierre Boulez", isCorrect: false },
-				{ answerText: 'Edgard Varesse', isCorrect: true },
-				{ answerText: 'Igor Stravinsky', isCorrect: false },
-			],
+			answers: ['Vivaldi', "Pierre Boulez", 'Edgard Varesse', 'Igor Stravinsky'],
+			correctAnswerIndex: 3
 		},
 		{
 			questionText: "What instrument did Frank play in his first band 'The Blackouts'?",
-			answerOptions: [
-				{ answerText: 'Guitar', isCorrect: false },
-				{ answerText: "Drums", isCorrect: true },
-				{ answerText: 'Double Bass', isCorrect: false },
-				{ answerText: 'Alto Sax', isCorrect: false },
-			],
+			answers: ['Guitar', "Drums", 'Double Bass', 'Alto Sax'],
+			correctAnswerIndex: 2
 		},
 	];
+	// const questions = [
+	// 	{
+	// 		questionText: 'Which of these does Frank Zappa have named after him?',
+	// 		answerOptions: [
+	// 			{ answerText: 'A comet - Zappa 421a', isCorrect: false },
+	// 			{ answerText: 'A dinosaur - Zappasaurus', isCorrect: false },
+	// 			{ answerText: 'A type of bacteria that causes acne - P. Acnes type Zappae', isCorrect: true },
+	// 			{ answerText: 'An element of the periodic table - Zapponium (Za)', isCorrect: false },
+	// 		],
+	// 	},
+	// 	{
+	// 		questionText: 'Which famous guest bass player played on the title track of Apostrophe?',
+	// 		answerOptions: [
+	// 			{ answerText: 'Greg Lake', isCorrect: false },
+	// 			{ answerText: 'Jack Bruce', isCorrect: true },
+	// 			{ answerText: 'Lemmy', isCorrect: false },
+	// 			{ answerText: 'Bill Wyman', isCorrect: false },
+	// 		],
+	// 	},
+	// 	{
+	// 		questionText: 'In January 1990, which country appointed Zappa as "Special Ambassador to the West on Trade, Culture and Tourism”?',
+	// 		answerOptions: [
+	// 			{ answerText: 'Czech Republic', isCorrect: true },
+	// 			{ answerText: 'Poland', isCorrect: false },
+	// 			{ answerText: 'Belarus', isCorrect: false },
+	// 			{ answerText: 'Hungary', isCorrect: false },
+	// 		],
+	// 	},
+	// 	{
+	// 		questionText: 'What was Franks middle name?',
+	// 		answerOptions: [
+	// 			{ answerText: 'Harold', isCorrect: false },
+	// 			{ answerText: 'Bob', isCorrect: false },
+	// 			{ answerText: 'David', isCorrect: false },
+	// 			{ answerText: 'Vincent', isCorrect: true },
+	// 		],
+	// 	},
+	// 	{
+	// 		questionText: 'In 1991, Zappa considered running for President. Who did he want as his vice president?',
+	// 		answerOptions: [
+	// 			{ answerText: 'Bill Clinton', isCorrect: false },
+	// 			{ answerText: 'Jello Biafra (from the Dead Kennedys)', isCorrect: false },
+	// 			{ answerText: 'Captain Beefheart', isCorrect: false },
+	// 			{ answerText: 'Texas billionaire Ross Perot', isCorrect: true },
+	// 		],
+	// 	},
+	// 	{
+	// 		questionText: 'Where was Frank born?',
+	// 		answerOptions: [
+	// 			{ answerText: 'Los Angeles, California', isCorrect: false },
+	// 			{ answerText: 'Baltimore, Maryland', isCorrect: true },
+	// 			{ answerText: 'Cleveland, Ohio', isCorrect: false },
+	// 			{ answerText: 'Lancaster, California', isCorrect: false },
+	// 		],
+	// 	},
+	// 	{
+	// 		questionText: "Who was 'The Indian of the band'?",
+	// 		answerOptions: [
+	// 			{ answerText: 'Ian Underwood', isCorrect: false },
+	// 			{ answerText: 'Scott Thunes', isCorrect: false },
+	// 			{ answerText: 'Jimmy Carl Black', isCorrect: true },
+	// 			{ answerText: 'Captain Beefheart', isCorrect: false },
+	// 		],
+	// 	},
+	// 	{
+	// 		questionText: "Which Zappa album features an excerpt from 'Run Home Slow', a theme tune Frank recorded for a Cowboy film in the 1960s?",
+	// 		answerOptions: [
+	// 			{ answerText: 'Lumpy Gravy', isCorrect: true },
+	// 			{ answerText: "We're only in it for the money", isCorrect: false },
+	// 			{ answerText: 'One size fits all', isCorrect: false },
+	// 			{ answerText: 'Broadway the Hardway', isCorrect: false },
+	// 		],
+	// 	},
+	// 	{
+	// 		questionText: "Which composer did Frank often say was his biggest influence as a teenager?",
+	// 		answerOptions: [
+	// 			{ answerText: 'Vivaldi', isCorrect: false },
+	// 			{ answerText: "Pierre Boulez", isCorrect: false },
+	// 			{ answerText: 'Edgard Varesse', isCorrect: true },
+	// 			{ answerText: 'Igor Stravinsky', isCorrect: false },
+	// 		],
+	// 	},
+	// 	{
+	// 		questionText: "What instrument did Frank play in his first band 'The Blackouts'?",
+	// 		answerOptions: [
+	// 			{ answerText: 'Guitar', isCorrect: false },
+	// 			{ answerText: "Drums", isCorrect: true },
+	// 			{ answerText: 'Double Bass', isCorrect: false },
+	// 			{ answerText: 'Alto Sax', isCorrect: false },
+	// 		],
+	// 	},
+	// ];
 
 	// const questions2 = () => {
 	// 	console.log('test')
@@ -119,9 +171,9 @@ function QuestionBox(props) {
 		return score
 	}
 
-	const handleCorrect = (isCorrect) => {
+	const handleCorrect = (answer, index) => {
 
-		if (isCorrect) {
+		if (index === answer.correctAnswerIndex) {
 			console.log('true')
 			return setBgColor('correct')
 		}
@@ -131,12 +183,14 @@ function QuestionBox(props) {
 		}
 	}
 
-	const handleAnswerOptionClick = (isCorrect) => {
-
-		if (isCorrect) {
+	const handleAnswerOptionClick = (answer, index) => {
+		console.log(index)
+		console.log(answer)
+		if (index === answer.correctAnswerIndex) {
 			setScore(score + 1)
+
 		}
-		handleCorrect(isCorrect)
+		handleCorrect(index)
 
 
 
@@ -175,11 +229,9 @@ function QuestionBox(props) {
 								When button is clicked it checks to see if isCorrect is true.
 								If so bgColor state changes for that button */}
 								<div className='answer-section col-12 col-lg-6'>
-									<div className>
-										{questions[currentQuestion].answerOptions.map((answerOption) => (
-											<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)} className={bgColor}> {answerOption.answerText}</button>
-										))}
-									</div>
+									{questions[currentQuestion].answers.map((answer, index) => (
+										<button key={index} className={`mb-2 ${bgColor}`} onClick={() => handleAnswerOptionClick(answer, index)} > {answer}</button>
+									))}
 								</div>
 							</div>
 						</div>
