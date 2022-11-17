@@ -230,7 +230,7 @@ function QuestionBox(props) {
 								If so bgColor state changes for that button */}
 								<div className='answer-section col-12 col-lg-6'>
 									{questions[currentQuestion].answers.map((answer, index) => (
-										<button key={index} className={`mb-2 ${bgColor}`} onClick={() => handleAnswerOptionClick(answer, index)} > {answer}</button>
+										<button key={index} className="mb-2" onClick={() => handleAnswerOptionClick(answer, index)} > {answer}</button>
 									))}
 								</div>
 							</div>
