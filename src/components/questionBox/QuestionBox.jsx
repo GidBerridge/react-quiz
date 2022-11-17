@@ -4,58 +4,6 @@ import './QuestionBox.scss'
 
 
 function QuestionBox(props) {
-	// const questions = [
-	// 	{
-	// 		questionText: 'Which of these does Frank Zappa have named after him?',
-	// 		answers: ['A comet - Zappa 421a', 'A dinosaur - Zappasaurus', 'A type of bacteria that causes acne - P. Acnes type Zappae', 'An element of the periodic table - Zapponium (Za)'],
-	// 		correctAnswerIndex: 3
-	// 	},
-	// 	{
-	// 		questionText: 'Which famous guest bass player played on the title track of Apostrophe?',
-	// 		answers: ['Greg Lake', 'Jack Bruce', 'Lemmy', 'Bill Wyman'],
-	// 		correctAnswerIndex: 2
-	// 	},
-	// 	{
-	// 		questionText: 'In January 1990, which country appointed Zappa as "Special Ambassador to the West on Trade, Culture and Tourism”?',
-	// 		answers: ['Czech Republic', 'Poland', 'Belarus', 'Hungary'],
-	// 		correctAnswerIndex: 1
-	// 	},
-	// 	{
-	// 		questionText: 'What was Franks middle name?',
-	// 		answers: ['Harold', 'Bob', 'David', 'Vincent',],
-	// 		correctAnswerIndex: 4
-	// 	},
-	// 	{
-	// 		questionText: 'In 1991, Zappa considered running for President. Who did he want as his vice president?',
-	// 		answers: ['Bill Clinton', 'Jello Biafra (of the Dead Kennedys)', 'Captain Beefheart', 'Ross Perot'],
-	// 		correctAnswerIndex: 4
-	// 	},
-	// 	{
-	// 		questionText: 'Where was Frank born?',
-	// 		answers: ['Los Angeles, California', 'Baltimore, Maryland', 'Cleveland, Ohio', 'Lancaster, California'],
-	// 		correctAnswerIndex: 2
-	// 	},
-	// 	{
-	// 		questionText: "Who was 'The Indian of the band'?",
-	// 		answers: ['Ian Underwood', 'Scott Thunes', 'Jimmy Carl Black', 'Captain Beefheart'],
-	// 		correctAnswerIndex: 3
-	// 	},
-	// 	{
-	// 		questionText: "Which Zappa album features an excerpt from 'Run Home Slow', a theme tune Frank recorded for a Cowboy film in the 1960s?",
-	// 		answers: ['Lumpy Gravy', "We're only in it for the money", 'One size fits all', 'Broadway the Hardway',],
-	// 		correctAnswerIndex: 1
-	// 	},
-	// 	{
-	// 		questionText: "Which composer did Frank often say was his biggest influence as a teenager?",
-	// 		answers: ['Vivaldi', "Pierre Boulez", 'Edgard Varesse', 'Igor Stravinsky'],
-	// 		correctAnswerIndex: 3
-	// 	},
-	// 	{
-	// 		questionText: "What instrument did Frank play in his first band 'The Blackouts'?",
-	// 		answers: ['Guitar', "Drums", 'Double Bass', 'Alto Sax'],
-	// 		correctAnswerIndex: 2
-	// 	},
-	// ];
 	const questions = [
 		{
 			questionText: 'Which of these does Frank Zappa have named after him?',
@@ -163,7 +111,6 @@ function QuestionBox(props) {
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);
-	const [bgColor, setBgColor] = useState('default');
 
 
 
@@ -171,32 +118,15 @@ function QuestionBox(props) {
 		return score
 	}
 
-	const handleCorrect = (answer, index) => {
+	const handleAnswerOptionClick = (isCorrect) => {
 
-		if (index === answer.correctAnswerIndex) {
-			console.log('true')
-			return setBgColor('correct')
+		if (isCorrect) {
+			setScore(score + 1);
 		}
-		else {
-			console.log('false')
-			return setBgColor('incorrect')
-		}
-	}
-
-	const handleAnswerOptionClick = (answer, index) => {
-		console.log(index)
-		console.log(answer)
-		if (index === answer.correctAnswerIndex) {
-			setScore(score + 1)
-
-		}
-		handleCorrect(index)
-
-
 
 		const nextQuestion = currentQuestion + 1;
 		if (nextQuestion < questions.length) {
-			setCurrentQuestion(nextQuestion)
+			setCurrentQuestion(nextQuestion);
 		} else {
 			setShowScore(true);
 		}
@@ -208,7 +138,7 @@ function QuestionBox(props) {
 	return (
 
 		<div className='card-container'>
-			{/* {questions2()} */}
+			{questions2()}
 			{showScore ?
 				<DisplayScore
 					qAmount={questions.length}
@@ -226,7 +156,7 @@ function QuestionBox(props) {
 								</div>
 								<div className='answer-section col-12 col-lg-6'>
 									{questions[currentQuestion].answerOptions.map((answerOption) => (
-										<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)} className='mb-2' >{answerOption.answerText}</button>
+										<button className='mb-2' onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
 									))}
 								</div>
 							</div>
