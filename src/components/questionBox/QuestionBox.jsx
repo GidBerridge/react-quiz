@@ -97,21 +97,20 @@ function QuestionBox(props) {
 		},
 	];
 
-	// const questions2 = () => {
-	// 	console.log('test')
-	// 	fetch('https://api.airtable.com/v0/apppqTCPQGmQOEoi7/zappaQuiz?api_key=4EHjHf99psrakN')
-	// 		.then(res => res.json())
-	// 		.then((data) => {
-	// 			console.log(data);
-	// 		})
-	// 		.catch(error => console.log(error))
+	const questions2 = () => {
+		console.log('test')
+		fetch('https://api.airtable.com/v0/apppqTCPQGmQOEoi7/zappaQuiz?api_key=4EHjHf99psrakN')
+			.then(res => res.json())
+			.then((data) => {
+				console.log(data);
+			})
+			.catch(error => console.log(error))
 
-	// }
+	}
 
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);
-	const [bgColor, setBgColor] = useState('default');
 
 
 
@@ -119,30 +118,15 @@ function QuestionBox(props) {
 		return score
 	}
 
-	const handleCorrect = (isCorrect) => {
-
-		if (isCorrect) {
-			console.log('true')
-			return setBgColor('correct')
-		}
-		else {
-			console.log('false')
-			return setBgColor('incorrect')
-		}
-	}
-
 	const handleAnswerOptionClick = (isCorrect) => {
 
 		if (isCorrect) {
-			setScore(score + 1)
+			setScore(score + 1);
 		}
-		handleCorrect(isCorrect)
-
-
 
 		const nextQuestion = currentQuestion + 1;
 		if (nextQuestion < questions.length) {
-			setCurrentQuestion(nextQuestion)
+			setCurrentQuestion(nextQuestion);
 		} else {
 			setShowScore(true);
 		}
@@ -154,7 +138,7 @@ function QuestionBox(props) {
 	return (
 
 		<div className='card-container'>
-			{/* {questions2()} */}
+			{questions2()}
 			{showScore ?
 				<DisplayScore
 					qAmount={questions.length}
@@ -170,16 +154,10 @@ function QuestionBox(props) {
 									</div>
 									<div className='question-text'>{questions[currentQuestion].questionText}</div>
 								</div>
-
-								{/* question has 4 answers. 
-								When button is clicked it checks to see if isCorrect is true.
-								If so bgColor state changes for that button */}
 								<div className='answer-section col-12 col-lg-6'>
-									<div className>
-										{questions[currentQuestion].answerOptions.map((answerOption) => (
-											<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)} className={bgColor}> {answerOption.answerText}</button>
-										))}
-									</div>
+									{questions[currentQuestion].answerOptions.map((answerOption) => (
+										<button className='mb-2' onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+									))}
 								</div>
 							</div>
 						</div>
